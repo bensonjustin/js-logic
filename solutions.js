@@ -55,7 +55,7 @@ function login(password){
   return "Login Success!";
  }
 }
-console.log(login("test1234"));
+console.log(login("test234"));
 /*
  * #3
  * Function - isGreaterThan
