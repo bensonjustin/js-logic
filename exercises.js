@@ -316,7 +316,11 @@ console.log('buyDoughnut', buyDoughnut())
 /*Create a function name dailySpecials which takes in a parameter: `special`.
 Inside the function, create a switch statement that will check the daily specials of your favorite restaurant (or make up your own daily specials for each day of the week.*/
 
-
+function dailySpecials(special){
+  if(special = "hot dog"){
+    return "hot dog";
+  }
+}
 
 /*
 For loops - A for loop checks a condition a specific number of times and allows us to execute a code block and evaluate a condition to determine if our loop should run again.
@@ -345,6 +349,11 @@ for (var i = 0; i<toyotaModels.length; i++){
  * "Player: 5"
 */
 
+var players = ["Player: 1", "Player: 2", "Player: 3", "Player: 4", "Player: 5"];
+
+for (var i = 0; i < players.length; i ++){
+  console.log("Players: " + players[i]);
+}
 
 /* 
  * #16
@@ -352,6 +361,9 @@ for (var i = 0; i<toyotaModels.length; i++){
 */
   var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
 
+  for (var i = 0; i < myFavFoods.length; i ++){
+    console.log("myFavFoods: " + myFavFoods[i]);
+  }
 
 /*
  * #17
@@ -368,7 +380,15 @@ for (var i = 0; i<toyotaModels.length; i++){
  * Console.log your result.
 */
 
-
+var numArray = [1, 2, 3, 4, 5];
+var total = 0
+function sumItUp(arr){
+for (var i = 0; i < (arr.length +1); i ++){
+  total += i;
+  }
+}
+sumItUp(numArray);
+console.log("sumItUp: " + total);
 
 /*
  * #18
@@ -383,6 +403,22 @@ for (var i = 0; i<toyotaModels.length; i++){
 */ 
 
 var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Sidney Deane", "World B Free"];
+var east = [];
+var west = [];
+
+function allStars(ballers){
+  for (i = 0; i < ballers.length; i ++){
+    if (i % 2 === 0){
+      east.push(ballers[i]);
+    }else{
+      west.push(ballers[i]);
+    }
+  }
+}
+allStars(players);
+console.log(east);
+console.log(west);
+
 /*
  * #19
  * Function - subways
@@ -397,6 +433,14 @@ var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Si
 
   var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
 
+  function subways(special){
+    for (i = 0; i < special.length; i ++){
+      if (i % 2 === 1)
+      console.log(special.splice(i, 1, "Classic Tuna"))
+    }
+  }
+  subways(subOftheDay)
+  console.log(subOftheDay)
 
 /*
 Final Boss
@@ -411,16 +455,16 @@ Final Boss
 */
 
 var phrase = "An apple a day keeps Alice feeling awesome!";
+var noA = []
  
-  
-  
-
-
-
-
-
-
-
-
-
-
+function removeLetter(str){
+  for (i = 0; i < str.length; i ++){
+    if (str.charAt(i) !== "A" && str.charAt(i) !== "a"){
+      console.log(str.charAt(i))  
+      //console.log(noA.push(str.charAt(i)))
+    }
+  }
+  //console.log(noA.push(str))
+}
+removeLetter(phrase);
+//console.log(noA.push(phrase));
